@@ -1,5 +1,4 @@
-import tkinter as tk
-from tkinter import ttk
+import customtkinter as c
 
 class UserView:
     def __init__(self, root):
@@ -7,12 +6,12 @@ class UserView:
         self.create_widgets()
 
     def create_widgets(self):
-        ttk.Label(self.root, text="User Information").pack()
-        self.username_entry = ttk.Entry(self.root)
-        self.username_entry.pack()
-        self.email_entry = ttk.Entry(self.root)
-        self.email_entry.pack()
-        self.contact_info_entry = ttk.Entry(self.root)
-        self.contact_info_entry.pack()
-        self.submit_button = ttk.Button(self.root, text="Submit")
-        self.submit_button.pack()
+        c.CTkLabel(self.root, text="User Information").pack(pady=10)
+        self.username_entry = c.CTkEntry(self.root, placeholder_text="Username")
+        self.username_entry.pack(pady=5)
+        self.email_entry = c.CTkEntry(self.root, placeholder_text="Email")
+        self.email_entry.pack(pady=5)
+        self.contact_info_entry = c.CTkEntry(self.root, placeholder_text="Contact Info")
+        self.contact_info_entry.pack(pady=5)
+        self.submit_button = c.CTkButton(self.root, text="Submit")
+        self.submit_button.pack(pady=10)

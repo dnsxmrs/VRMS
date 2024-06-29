@@ -1,5 +1,4 @@
-import tkinter as tk
-from tkinter import ttk
+import customtkinter as c
 
 class MainView:
     def __init__(self, root):
@@ -7,6 +6,6 @@ class MainView:
         self.create_widgets()
 
     def create_widgets(self):
-        ttk.Label(self.root, text="Vehicle Renting Management System").pack()
-        self.add_button = ttk.Button(self.root, text="Add Vehicle")
-        self.add_button.pack()
+        c.CTkLabel(self.root, text="Vehicle Renting Management System").pack(pady=10)
+        self.add_button = c.CTkButton(self.root, text="Add Vehicle")
+        self.add_button.pack(pady=10)

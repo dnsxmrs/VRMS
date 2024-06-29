@@ -5,5 +5,5 @@ class VehicleController:
     def add_vehicle(self, make, model, year, availability):
         cursor = self.conn.cursor()
         cursor.execute("INSERT INTO vehicles (make, model, year, availability) VALUES (?, ?, ?, ?)",
-                    (make, model, year, availability))
+                        (make, model, year, availability))
         self.conn.commit()

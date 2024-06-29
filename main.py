@@ -1,4 +1,4 @@
-import tkinter as tk
+import customtkinter as c
 from view.main_view import MainView
 from controller.main_controller import MainController
 from model.database import ensure_schema
@@ -6,7 +6,7 @@ from model.database import ensure_schema
 def main():
     ensure_schema()  # Ensure the database schema is correct
 
-    root = tk.Tk()
+    root = c.CTk()
     root.title("Vehicle Renting Management System")
     root.geometry("800x600")
     

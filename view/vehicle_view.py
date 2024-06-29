@@ -1,5 +1,4 @@
-import tkinter as tk
-from tkinter import ttk
+import customtkinter as c
 
 class VehicleView:
     def __init__(self, root):
@@ -7,14 +6,14 @@ class VehicleView:
         self.create_widgets()
 
     def create_widgets(self):
-        ttk.Label(self.root, text="Add a new vehicle").pack()
-        self.make_entry = ttk.Entry(self.root)
-        self.make_entry.pack()
-        self.model_entry = ttk.Entry(self.root)
-        self.model_entry.pack()
-        self.year_entry = ttk.Entry(self.root)
-        self.year_entry.pack()
-        self.availability_entry = ttk.Entry(self.root)
-        self.availability_entry.pack()
-        self.submit_button = ttk.Button(self.root, text="Submit")
-        self.submit_button.pack()
+        c.CTkLabel(self.root, text="Add a new vehicle").pack(pady=10)
+        self.make_entry = c.CTkEntry(self.root, placeholder_text="Make")
+        self.make_entry.pack(pady=5)
+        self.model_entry = c.CTkEntry(self.root, placeholder_text="Model")
+        self.model_entry.pack(pady=5)
+        self.year_entry = c.CTkEntry(self.root, placeholder_text="Year")
+        self.year_entry.pack(pady=5)
+        self.availability_entry = c.CTkEntry(self.root, placeholder_text="Availability")
+        self.availability_entry.pack(pady=5)
+        self.submit_button = c.CTkButton(self.root, text="Submit")
+        self.submit_button.pack(pady=10)
