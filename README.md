@@ -16,5 +16,5 @@ This project is a vehicle renting management system designed to cater to the div
 ## How to Run
 1. Ensure you have Python and the required libraries installed.
 2. Run the `main.py` file:
-    ```bash
-    python main.py
+   ```bash
+   python main.py
