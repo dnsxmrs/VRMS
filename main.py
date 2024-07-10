@@ -1,5 +1,5 @@
 import customtkinter as c
-from view.main_view import MainView
+from view.login_view import Login
 from controller.main_controller import MainController
 from model.database import ensure_schema
 
@@ -8,16 +8,16 @@ def main():
 
     root = c.CTk()
     root.title("Vehicle Renting Management System")
-    root.geometry("800x600")
+    root.geometry("1366x768")
+    root.resizable(False, False)
+    c.set_appearance_mode("Light")
     
     # Initialize the main view and controller
-    main_view = MainView(root)
-    main_controller = MainController(main_view)
-    
-    # Example usage
-    main_controller.add_vehicle("Toyota", "Camry", 2021, "Available")
-    main_controller.add_user("johndoe", "johndoe@example.com", "123-456-7890")
-    
+    Login(root)
+    MainController(root)
+
+
+
     root.mainloop()
 
 if __name__ == "__main__":
